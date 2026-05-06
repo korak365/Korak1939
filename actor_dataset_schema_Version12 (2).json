@@ -1,0 +1,29 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["company", "role", "question"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "company": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "role": {
+                        "label": "Role",
+                        "format": "text"
+                    },
+                    "question": {
+                        "label": "Interview Question",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

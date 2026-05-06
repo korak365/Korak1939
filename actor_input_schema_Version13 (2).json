@@ -1,0 +1,36 @@
+{
+    "title": "Input schema of the Glassdoor Interview Question Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "URLs to start with. Use Glassdoor interview listing / company pages or search results (ensure you have permission).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.glassdoor.com/Interview/index.htm"
+                }
+            ]
+        },
+        "companies": {
+            "title": "Companies to tag",
+            "type": "array",
+            "description": "Optional list of company names to prioritize or tag results with.",
+            "default": []
+        },
+        "roles": {
+            "title": "Roles to filter",
+            "type": "array",
+            "description": "Optional list of role keywords (e.g., 'software engineer') to focus the crawl.",
+            "default": []
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of requests that can be made by this crawler.",
+            "default": 200
+        }
+    }
+}
